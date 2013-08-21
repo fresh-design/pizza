@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Pizza Ovale | Caffe Italiano</title>
+        <meta name="description" content="Pizza Ovale">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="" title="Pizza Ovale" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li class="n-menu">
+                        <a href="" title="">Меню</a>
+                    </li>
+                    <li class="n-restaurants">
+                        <a href="" title="">Наши&nbsp;рестораны</a>
+                    </li>
+                    <li class="n-team">
+                        <a href="" title="">Команда</a>
+                    </li>
+                    <li class="n-services">
+                        <a href="" title="">Услуги</a>
+                    </li>
+                    <li class="n-news">
+                        <a href="" title="">Новости&nbsp;и&nbsp;акции</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="pre-bill">
+                <div class="title">
+                    <ins></ins>
+                    <span>Предварительный просчёт</span>
+                </div>
+                <span>Общая&nbsp;сумма&nbsp;вашего&nbsp;заказа</span>
+                <span class="price">120&nbsp;грн</span>
+                <ins class="barr"></ins>
+            </div>
+        </header>
+
+        <section class="screen1">
+            
+            <div class="homemade-pastry">
+                <span>Домашнее тесто</span>
+                <ins></ins>
+            </div>
+            <div class="made-with-love">
+                <span>Приготовлено с любовью</span>
+                <ins></ins>
+            </div>
+            <div class="fresh-components">
+                <span>Свежие ингредиенты</span>
+                <ins></ins>
+            </div>
+            <video id="player" autoplay loop>
+                <source src="background.mp4" type="video/mp4" />
+                <source src="background.ogv" type="video/ogg" />
+            </video>
+        </section>
+
+        <section class="screen2">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="" title="">
+                            <img src="" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="team">
+                <a href="" title="">
+                    <ul>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                    </ul>
+                </a>
+            </div>
+            <div class="visitors">
+                <a href="" title="">
+                    <ul>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                    </ul>
+                </a>
+            </div>
+        </section>
+        
+        <section class="screen3">
+            <div class="contacts">
+
+            </div>
+            <div class="map"></div>
+        </section>
+
+        <footer>
+        </footer>
+
+        <script src="js/vendor/jquery-1.10.1.min.js"></script>
+        <script src="js/jquery.videobackground.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('dl').toggle();
+                $('h2').bind('click', function(event) {
+                    event.preventDefault();
+                    $(this).next('dl').slideToggle(500, function() {
+                        $('.video-background').videobackground('resize');
+                    });
+                });
+                $('.screen1').prepend('<div class="video-background"></div>');
+                $('.video-background').videobackground({
+                    videoSource: [['video/big-buck-bunny.mp4', 'video/mp4'],
+                        ['video/big-buck-bunny.webm', 'video/webm'], 
+                        ['video/big-buck-bunny.ogv', 'video/ogg']], 
+                    controlPosition: '#main',
+                    poster: 'video/big-buck-bunny.jpg',
+                    loadedCallback: function() {
+                        $(this).videobackground('mute');
+                    }
+                });
+            });
+        </script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
