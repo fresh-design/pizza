@@ -14,6 +14,22 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+            <script>
+        var map;
+        function initialize() {
+          var mapOptions = {
+            zoom: 8,
+            center: new google.maps.LatLng(-34.397, 150.644),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+          map = new google.maps.Map(document.getElementById('map-canvas'),
+              mapOptions);
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+            </script>   
     </head>
     <body>
         <header>
@@ -63,131 +79,165 @@
                 <span>Свежие ингредиенты</span>
                 <ins></ins>
             </div>
-            <video id="player" autoplay loop>
-                <source src="background.mp4" type="video/mp4" />
-                <source src="background.ogv" type="video/ogg" />
-            </video>
+            <div class="top-sh"></div>
+            <div class="dots"></div>
         </section>
 
         <section class="screen2">
-            <div class="menu">
-                <ul>
-                    <li>
-                        <a href="" title="">
-                            <img src="" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" title="">
-                            <img src="" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" title="">
-                            <img src="" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" title="">
-                            <img src="" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" title="">
-                            <img src="" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" title="">
-                            <img src="" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" title="">
-                            <img src="" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" title="">
-                            <img src="" alt="">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="team">
-                <a href="" title="">
+            <div class="wrap">
+                <div class="menu">
                     <ul>
                         <li>
-                            <img src="" alt="">
+                            <a href="" title="">
+                                <img src="" alt="">
+                            </a>
                         </li>
                         <li>
-                            <img src="" alt="">
+                            <a href="" title="">
+                                <img src="" alt="">
+                            </a>
                         </li>
                         <li>
-                            <img src="" alt="">
+                            <a href="" title="">
+                                <img src="" alt="">
+                            </a>
                         </li>
                         <li>
-                            <img src="" alt="">
+                            <a href="" title="">
+                                <img src="" alt="">
+                            </a>
                         </li>
                         <li>
-                            <img src="" alt="">
+                            <a href="" title="">
+                                <img src="" alt="">
+                            </a>
                         </li>
                         <li>
-                            <img src="" alt="">
+                            <a href="" title="">
+                                <img src="" alt="">
+                            </a>
                         </li>
                         <li>
-                            <img src="" alt="">
+                            <a href="" title="">
+                                <img src="" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" title="">
+                                <img src="" alt="">
+                            </a>
                         </li>
                     </ul>
-                </a>
-            </div>
-            <div class="visitors">
-                <a href="" title="">
-                    <ul>
-                        <li>
-                            <img src="" alt="">
-                        </li>
-                        <li>
-                            <img src="" alt="">
-                        </li>
-                        <li>
-                            <img src="" alt="">
-                        </li>
-                        <li>
-                            <img src="" alt="">
-                        </li>
-                        <li>
-                            <img src="" alt="">
-                        </li>
-                        <li>
-                            <img src="" alt="">
-                        </li>
-                        <li>
-                            <img src="" alt="">
-                        </li>
-                        <li>
-                            <img src="" alt="">
-                        </li>
-                        <li>
-                            <img src="" alt="">
-                        </li>
-                        <li>
-                            <img src="" alt="">
-                        </li>
-                    </ul>
-                </a>
+                </div>
+                <div class="team">
+                    <a href="" title="">
+                        <ul>
+                            <li>
+                                <img src="" alt="">
+                            </li>
+                            <li>
+                                <img src="" alt="">
+                            </li>
+                            <li>
+                                <img src="" alt="">
+                            </li>
+                            <li>
+                                <img src="" alt="">
+                            </li>
+                            <li>
+                                <img src="" alt="">
+                            </li>
+                            <li>
+                                <img src="" alt="">
+                            </li>
+                            <li>
+                                <img src="" alt="">
+                            </li>
+                        </ul>
+                    </a>
+                </div>
+                <div class="visitors">
+                    <a href="" title="">
+                        <ul>
+                            <li>
+                                <img src="" alt="">
+                            </li>
+                            <li>
+                                <img src="" alt="">
+                            </li>
+                            <li>
+                                <img src="" alt="">
+                            </li>
+                            <li>
+                                <img src="" alt="">
+                            </li>
+                            <li>
+                                <img src="" alt="">
+                            </li>
+                            <li>
+                                <img src="" alt="">
+                            </li>
+                            <li>
+                                <img src="" alt="">
+                            </li>
+                            <li>
+                                <img src="" alt="">
+                            </li>
+                            <li>
+                                <img src="" alt="">
+                            </li>
+                            <li>
+                                <img src="" alt="">
+                            </li>
+                        </ul>
+                    </a>
+                </div>
             </div>
         </section>
         
         <section class="screen3">
-            <div class="contacts">
-
+            <div class="wrap">
+                <div class="contacts-block">
+                    <div class="contacts-and-form">
+                        <div class="contacts">
+                            <h3>Телефон</h3>
+                            <p>
+                                <span>+380&nbsp;99&nbsp;612-36-71</span><br>
+                                <span>+380&nbsp;50&nbsp;698-98-91</span>
+                            </p>
+                            <h3>E-mail</h3>
+                            <p>
+                                <a href="mailto:info@pizzaovale.com.ua">info@pizzaovale.com.ua</a>
+                            </p>
+                        </div>
+                        <form>
+                            <h3>Обратная связь</h3>
+                            <div>
+                                <label for="name">Имя</label>
+                                <input type="text" name="name" id="name">
+                            </div>
+                            <div>
+                                <label for="phone">Телефон</label>
+                                <input type="text" name="phone" id="phone">
+                            </div>
+                            <div class="comment">
+                                <label for="message">Сообщение</label>
+                                <textarea name="message" id="message"></textarea>
+                            </div>
+                            <button type="submit">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="map-block">
+                    <div id="map-canvas"></div>
+                </div>
             </div>
-            <div class="map"></div>
         </section>
-
         <footer>
+            slksdfjklshgslkghs
         </footer>
+
+       
 
         <script src="js/vendor/jquery-1.10.1.min.js"></script>
         <script src="js/jquery.videobackground.js"></script>
@@ -213,6 +263,8 @@
                 });
             });
         </script>
+
+        
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
     </body>

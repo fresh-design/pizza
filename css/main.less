@@ -70,6 +70,10 @@ body {
     height: 100%;
 }
 
+.wrap {
+
+}
+
 .img-link {
     text-decoration: none;
     border: none;
@@ -78,7 +82,9 @@ body {
 header {
     position: fixed;
     height: 135px;
-    width:100%;
+    width:1050px;
+    left:50%;
+    margin: 0 0 0 -525px;
     z-index: 9;
 
     .logo {
@@ -130,7 +136,7 @@ header {
             }
             .n-restaurants {
                 right: 50%;
-                margin: 0 224px 0 0px;
+                margin: 0 215px 0 0px;
             }
             .n-team {
                 right: 50%;
@@ -138,11 +144,11 @@ header {
                 }
             .n-services {
                 left:50%;
-                margin: 0 0px 0 110px;
+                margin: 0 0px 0 92px;
             }
             .n-news {
                 left:50%;
-                margin: 0 0px 0 215px;
+                margin: 0 0px 0 195px;
             }
         }
     }
@@ -153,8 +159,7 @@ header {
         height:112px;
         position: absolute;
         top:0;
-        left:50%;
-        margin: 0 0 0 370px;
+        right: -5px;
         padding: 5px 15px 10px 10px;
         .title {
             position: relative;
@@ -217,15 +222,42 @@ header.yellow {
     }
 }
 
+header.stop {
+    position: absolute !important;
+    top:200% !important;
+}
+
 section {
-    height: 100%;
+    height: 100% !important;
     overflow: hidden;
+    position: relative;
 }
 
 .screen1 {
     position: relative;
     height: 100%;
     background: #000;
+    z-index: 1;
+
+    .top-sh {
+        background: url("../img/top-sh.png") repeat-x;
+        height: 178px;
+        position: absolute;
+        top:0;
+        left:0;
+        right: 0;
+        z-index: 2;
+    }
+
+    .dots {
+        background: url("../img/dots.png");
+        z-index: 1;
+        position: absolute;
+        top:0;
+        right: 0;
+        bottom:0;
+        left:0;
+    }
 
 
     .video-background {
@@ -238,8 +270,9 @@ section {
         z-index: 0;
     }
     .video-background video {
-        min-height: 37%; 
+        min-height: 32%; 
         min-width:100%; 
+        opacity: 1;
     }
 
     .ui-video-background {
@@ -268,16 +301,194 @@ section {
 }
 .screen2 {
     background: #fff;
+    z-index: 0;
+    position: fixed;
+    width:100%;
+    max-height:100%;
+    top:0;
+    right:0;
+    bottom: 0;
+    left:0;
+
+    .wrap {
+        background: red;
+        height:730px;
+
+    }
+
+    .bigpic {
+        width:20%;
+        max-width:200px;
+        background: #fadca6;
+    }
+
+    .smallpic {
+        width:10%;
+        max-width: 100px;
+        background: #c4820c;
+    }
+
+    .menu {
+        max-width:520px;
+        max-height:415px;
+    }
+
+    .team {}
+
+    .visitos {}
+
+    ul {
+        padding: 0;
+        margin: 0;
+        li {
+            padding: 0;
+            margin: 0;
+            list-style-type:none;
+        }
+    }
+
 }
 .screen3 {
+    z-index: 2;
+    position: relative;
     background-color: #fff;
     background: url("../img/contacts-bg.jpg");
     background-size: cover; 
+    border-bottom: 1px solid #c5c5c5;
+    margin: 0 0 -60px;
+    min-height: 870px;
+
+    .wrap {
+        bottom: 140px;
+    }
+
+    .contacts-block {
+        position: relative;
+        height:602px;
+        left:0;
+        top:0;
+        background: rgba(255,255,255,.6);
+        bottom: 0;
+        width: 410px;
+        padding: 10px;
+
+        .contacts-and-form {
+            background: #fff;
+            border:1px solid #c5c5c5;
+            padding: 15px;
+            text-align: center;
+            overflow: auto;
+
+            h3 {
+                text-transform: uppercase;
+                color: #392500;
+                font-size: 20px;
+                width:200px;
+                margin: 20px auto 0;
+                display: block;
+                border-bottom: 1px solid #c5c5c5;
+            }
+
+            a {
+                color: #222222;
+                text-decoration: none;
+            }
+            a:hover {
+                border-bottom: 1px solid;
+            }
+            p {
+                margin: 15px auto;
+                line-height: 19px;
+                color: #222222;
+                font-size: 19px;
+            }
+
+            .contacts {
+
+            }
+
+            form {
+                h3 {
+                    margin: 20px auto 10px;
+                }
+                label {
+                    display: block;
+                }
+                input, textarea {
+                    background: #fff;
+                    border: 1px solid #c5c5c5; 
+                    width: 360px;
+                    padding: 8px; 
+
+                }
+
+                input {
+                    height:22px;
+                    line-height: 32px;
+                }
+
+                textarea {
+                    height: 110px;
+                    display: block;
+                    margin: 0 0 10px;
+                }
+
+                button {
+                    background: #eaa323;
+                    font-size: 15px;
+                    font-weight: bold;
+                    display: block;
+                    height:32px;
+                    line-height: 32px;
+                    color: #fff;
+                    text-align: center;
+                    border:none;
+                    width: 378px;
+                }
+
+                div {
+                    margin: 5px 0 0 0;
+                }
+            }
+
+        }
+    }
+
+    .map-block {
+        background:#fff;
+        padding: 10px;
+        border: 1px solid #c5c5c5;
+        width:590px;
+        position: absolute;
+        right: 0;
+        top:0;
+        
+        height: 600px;
+
+        #map-canvas {
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
 
+.wrap {
+    width: 1050px;
+    position: absolute;
+    top:170px;
+    left:50%;
+    margin: 0 0 0 -525px;
+
+}
+
+
 footer {
-    height: 200px;
-    background:#ccc;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background:#ededed;
+    border-top: 10px solid #fff;
 }
 
 

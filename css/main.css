@@ -63,7 +63,9 @@ body {
 header {
   position: fixed;
   height: 135px;
-  width: 100%;
+  width: 1050px;
+  left: 50%;
+  margin: 0 0 0 -525px;
   z-index: 9;
 }
 header .logo {
@@ -116,7 +118,7 @@ header nav ul .n-menu {
 }
 header nav ul .n-restaurants {
   right: 50%;
-  margin: 0 224px 0 0px;
+  margin: 0 215px 0 0px;
 }
 header nav ul .n-team {
   right: 50%;
@@ -124,11 +126,11 @@ header nav ul .n-team {
 }
 header nav ul .n-services {
   left: 50%;
-  margin: 0 0px 0 110px;
+  margin: 0 0px 0 92px;
 }
 header nav ul .n-news {
   left: 50%;
-  margin: 0 0px 0 215px;
+  margin: 0 0px 0 195px;
 }
 header .pre-bill {
   background: url("../img/pre-bill-bg.png") no-repeat;
@@ -136,8 +138,7 @@ header .pre-bill {
   height: 112px;
   position: absolute;
   top: 0;
-  left: 50%;
-  margin: 0 0 0 370px;
+  right: -5px;
   padding: 5px 15px 10px 10px;
 }
 header .pre-bill .title {
@@ -194,14 +195,38 @@ header.yellow nav ul li a {
 header.yellow .logo {
   background-position: 0 bottom;
 }
+header.stop {
+  position: absolute !important;
+  top: 200% !important;
+}
 section {
-  height: 100%;
+  height: 100% !important;
   overflow: hidden;
+  position: relative;
 }
 .screen1 {
   position: relative;
   height: 100%;
   background: #000;
+  z-index: 1;
+}
+.screen1 .top-sh {
+  background: url("../img/top-sh.png") repeat-x;
+  height: 178px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.screen1 .dots {
+  background: url("../img/dots.png");
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 .screen1 .video-background {
   position: absolute;
@@ -213,8 +238,9 @@ section {
   z-index: 0;
 }
 .screen1 .video-background video {
-  min-height: 37%;
+  min-height: 32%;
   min-width: 100%;
+  opacity: 1;
 }
 .screen1 .ui-video-background {
   position: absolute;
@@ -238,15 +264,159 @@ section {
 }
 .screen2 {
   background: #fff;
+  z-index: 0;
+  position: fixed;
+  width: 100%;
+  max-height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.screen2 .wrap {
+  background: red;
+  height: 730px;
+}
+.screen2 .bigpic {
+  width: 20%;
+  max-width: 200px;
+  background: #fadca6;
+}
+.screen2 .smallpic {
+  width: 10%;
+  max-width: 100px;
+  background: #c4820c;
+}
+.screen2 .menu {
+  max-width: 520px;
+  max-height: 415px;
+}
+.screen2 ul {
+  padding: 0;
+  margin: 0;
+}
+.screen2 ul li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 .screen3 {
+  z-index: 2;
+  position: relative;
   background-color: #fff;
   background: url("../img/contacts-bg.jpg");
   background-size: cover;
+  border-bottom: 1px solid #c5c5c5;
+  margin: 0 0 -60px;
+  min-height: 870px;
+}
+.screen3 .wrap {
+  bottom: 140px;
+}
+.screen3 .contacts-block {
+  position: relative;
+  height: 602px;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.6);
+  bottom: 0;
+  width: 410px;
+  padding: 10px;
+}
+.screen3 .contacts-block .contacts-and-form {
+  background: #fff;
+  border: 1px solid #c5c5c5;
+  padding: 15px;
+  text-align: center;
+  overflow: auto;
+}
+.screen3 .contacts-block .contacts-and-form h3 {
+  text-transform: uppercase;
+  color: #392500;
+  font-size: 20px;
+  width: 200px;
+  margin: 20px auto 0;
+  display: block;
+  border-bottom: 1px solid #c5c5c5;
+}
+.screen3 .contacts-block .contacts-and-form a {
+  color: #222222;
+  text-decoration: none;
+}
+.screen3 .contacts-block .contacts-and-form a:hover {
+  border-bottom: 1px solid;
+}
+.screen3 .contacts-block .contacts-and-form p {
+  margin: 15px auto;
+  line-height: 19px;
+  color: #222222;
+  font-size: 19px;
+}
+.screen3 .contacts-block .contacts-and-form form h3 {
+  margin: 20px auto 10px;
+}
+.screen3 .contacts-block .contacts-and-form form label {
+  display: block;
+}
+.screen3 .contacts-block .contacts-and-form form input,
+.screen3 .contacts-block .contacts-and-form form textarea {
+  background: #fff;
+  border: 1px solid #c5c5c5;
+  width: 360px;
+  padding: 8px;
+}
+.screen3 .contacts-block .contacts-and-form form input {
+  height: 22px;
+  line-height: 32px;
+}
+.screen3 .contacts-block .contacts-and-form form textarea {
+  height: 110px;
+  display: block;
+  margin: 0 0 10px;
+}
+.screen3 .contacts-block .contacts-and-form form button {
+  background: #eaa323;
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  color: #fff;
+  text-align: center;
+  border: none;
+  width: 378px;
+}
+.screen3 .contacts-block .contacts-and-form form div {
+  margin: 5px 0 0 0;
+}
+.screen3 .map-block {
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #c5c5c5;
+  width: 590px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 600px;
+}
+.screen3 .map-block #map-canvas {
+  width: 100%;
+  height: 100%;
+}
+.wrap {
+  width: 1050px;
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  margin: 0 0 0 -525px;
 }
 footer {
-  height: 200px;
-  background: #ccc;
+  height: 50px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  background: #ededed;
+  border-top: 10px solid #fff;
 }
 ins {
   display: block;
